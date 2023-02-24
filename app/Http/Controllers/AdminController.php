@@ -31,7 +31,7 @@ class AdminController extends Controller
     ]);
 
     if ($validator->fails()) {
-      session()->flash('danger', 'Periksa ulang kembali.');
+      session()->flash('error', 'Periksa ulang kembali data anda.');
       return redirect()->route('dashboard-admin');
     }
     if($request->info_file){
@@ -53,7 +53,7 @@ class AdminController extends Controller
         session()->flash('success', 'Data Berhasil Ditambah.');
         //redirect
     }
-    return redirect()->route('kegiatan-admin');
+    return redirect()->route('dashboard-admin');
   }
 
   public function kegiatan()

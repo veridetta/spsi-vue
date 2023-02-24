@@ -44,7 +44,6 @@ Route::middleware([
 ])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::post('informasi_add', [AdminController::class, 'informasi_add'])->name('informasi-add-admin');
-
         Route::get('kegiatan', [AdminController::class, 'kegiatan'])->name('kegiatan-admin');
         Route::post('kegiatan_add', [AdminController::class, 'kegiatan_add'])->name('kegiatan-add-admin');
 
